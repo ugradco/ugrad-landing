@@ -159,6 +159,7 @@ hr::after,
 	}
 
 	.hero-media-image {
+		height: 350px;
 		animation: fadeInLeftMedia 1s .2s both cubic-bezier(0.3, 0, 0.2, 1);
 		will-change: transform;
 	}
@@ -169,6 +170,7 @@ hr::after,
 	}
 
 	.features-box {
+		height: 300px;
 		animation: fadeUpBox 1s .2s both cubic-bezier(0.3, 0, 0.2, 1);
 		will-change: transform;
 	}
