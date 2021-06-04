@@ -8,14 +8,11 @@
 
   rootEl.classList.remove('no-js')
   rootEl.classList.add('js')
+  
 
   window.addEventListener('load', function () {
     body.classList.add('is-loaded')
-    checkLights();
-    
-    setTimeout(()=> {
-      alert("test");
-    }, 500)
+    body.classList.add('lights-off')
   })
 
   // Reveal animations
@@ -36,22 +33,22 @@
   // Light switcher
   if (lightSwitch) {
     window.addEventListener('load', checkLights)
+    lightSwitch.addEventListener('change', checkLights)
   }
 
   function checkLights () {
-    
+    alert("test")
     let labelText = lightSwitch.parentNode.querySelector('.label-text')
-    // if (lightSwitch.checked) {
-    //   body.classList.remove('lights-off')
-
-    // } else {
-    //   body.classList.add('lights-off')
-    //   if (labelText) {
-    //     labelText.innerHTML = 'light'
-    //   }
-    // }
-    if (labelText) {
-      labelText.innerHTML = 'dark'
+    if (lightSwitch.checked) {
+      body.classList.remove('lights-off')
+      if (labelText) {
+        labelText.innerHTML = 'dark'
+      }
+    } else {
+      body.classList.add('lights-off')
+      if (labelText) {
+        labelText.innerHTML = 'light'
+      }
     }
   }
 }())
