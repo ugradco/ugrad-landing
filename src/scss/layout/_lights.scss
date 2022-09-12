@@ -156,6 +156,7 @@ hr::after,
 	.header-logo-image {
 		animation: fadeInLogo .35s both cubic-bezier(0.3, 0, 0.2, 1);
 		will-change: transform;
+		height: 60px;
 	}
 
 	.hero-media-image {

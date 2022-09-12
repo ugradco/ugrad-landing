@@ -8,7 +8,6 @@
 
   rootEl.classList.remove('no-js')
   rootEl.classList.add('js')
-  
 
   window.addEventListener('load', function () {
     body.classList.add('is-loaded')
@@ -37,7 +36,6 @@
   }
 
   function checkLights () {
-    alert("test")
     let labelText = lightSwitch.parentNode.querySelector('.label-text')
     if (lightSwitch.checked) {
       body.classList.remove('lights-off')
